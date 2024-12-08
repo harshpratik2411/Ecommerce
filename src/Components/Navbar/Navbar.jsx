@@ -1,6 +1,8 @@
 import React from 'react'
 import Logo from '../../assets/logo.png'
 import { IoMdSearch } from "react-icons/io";
+import {FaCartShopping} from "react-icons/fa6"; 
+import DarkMode from '../DarkMode';
 
 const Navbar = () => {
   return ( 
@@ -8,7 +10,7 @@ const Navbar = () => {
     {/* upper Navbar */}
     <div className='bg-primary/40 py-3 sm:py-0'>
         <div className='container flex justify-between items-center'>
-            <div>
+           
                 <div>
                     <a href="#" className='font-bold text-2xl sm:text-3xl flex gap-2'>
                         <img src={Logo} alt="Logo" 
@@ -16,10 +18,10 @@ const Navbar = () => {
                         Shopsy
                         
                     </a>
-                </div> 
-                {/* searchbar and order button */}
-            </div> 
-            <div className=" relative group sm:block">
+              </div>
+                {/* searchbar  */} 
+             <div className='flex justify-between items-center gap-4'> 
+            <div className=" flex relative group sm:block">
                 <input 
                 type="text"
                  placeholder="Search"
@@ -30,8 +32,8 @@ const Navbar = () => {
                  />
                   <IoMdSearch
                   className="text-gray-500 group-hover:text-primary
-                 absolute top-1/2 -translate-y-1/2 right-3"/>
-            </div>
+                 absolute top-1/2 -translate-y-1/2 right-3"/> 
+                 </div>
          <button 
          onClick={() => alert("odering is not available yet")}
          className='bg-gradient-to-r from-primary to-secondary transition-all duration-200
@@ -39,16 +41,34 @@ const Navbar = () => {
          > 
             <span className='group-hover:block hidden transition-all duration-200'>
                 Order
-                <FaCartShopping/>
+                <FaCartShopping
+                className='text-xl text-white drop-shadow-sm cursor-pointer'/>
             </span>
-         </button>
-        </div> 
-        {/* order button */}
-    </div>
+         </button> 
+         {/* Darkmode Switch */}
+             <div>
+         <DarkMode/>
+             </div>
+                 </div>
+    
+            </div>
+         </div> 
+         <div></div>
         {/* Lower Navbar */}
-    <div></div>
-   </div>
-  )
-}
+        <div>
+            <ul> 
+                {
+                Menu.Map((data) => (
+                    <li>
+                        
+                    </li>
+                ))
+            }
+            </ul>
+        </div>
+</div> 
+    
+  );
+};
 
 export default Navbar
