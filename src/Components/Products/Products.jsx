@@ -10,16 +10,17 @@ const ProductsData = [
         id: 1,
         img: card1,  // Correct image import
         title: "Women Ethnic",
-        rating: 5.0,
-        color: "white",
+       rating: 5.0,
+       // color: "white",
         aosDelay: "0"
-    },
+    }, 
+
     {
         id: 2,
         img: card2,  // Correct image import
-        title: "Women Ethnic",
-        rating: 5.0,
-        color: "red",
+       title: "Women Ethnic",
+       rating: 5.0,
+       // color: "red",
         aosDelay: "200"
     },
     {
@@ -27,7 +28,7 @@ const ProductsData = [
         img: card3,  // Correct image import
         title: "Women Western",
         rating: 4.0,
-        color: "brown",
+        //color: "brown",
         aosDelay: "400"
     },
     {
@@ -35,15 +36,15 @@ const ProductsData = [
         img: card4,  // Correct image import
         title: "Goggles",
         rating: 4.4,
-        color: "yellow",
+        //color: "yellow",
         aosDelay: "600"
     },
     {
         id: 5,
         img: card4,  // Correct image import
         title: "Goggles",
-        rating: 4.4,
-        color: "pink",
+       rating: 4.4,
+        //color: "pink",
         aosDelay: "800" 
     },
 ];
@@ -54,8 +55,8 @@ const Products = () => {
             <div className='container'>
                 {/* Header section */}
                 <div className='text-center mb-10 max-w-[600px] mx-auto'>
-                    <p className='text-sm text-primary'>Top selling Products for you</p>
-                    <h1 className='text-3xl font-bold'>Products</h1>
+                    <p className='text-sm text-primary'>Top Selling Products for you</p>
+                    <h1 className='text-3xl font-bold'> Products</h1>
                     <p className='text-xs text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestiae.</p>
                 </div>
 
@@ -73,6 +74,7 @@ const Products = () => {
                                         <p className='text-sm text-gray-600'>{data.color}</p> 
                                     
                                           <FaStar className='text-yellow-400'/> 
+                                          
                                         <div className="flex justify-center items-center gap-1">
                                             <span>{data.rating}</span>
                                         
