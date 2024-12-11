@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/Hero/Hero'
+import Hero from './Components/Hero/Hero' 
+import Products from './Components/Products/Products'
+import AOS from 'aos';
+import 'Aos/dist/aos.css';
 
-const App = () => {
+
+
+const App = () => { 
+  React.useEffect(() => {
+      AOS.init ({
+        offdet:100,
+        duration:800,
+        easing:"ease-in-sine",
+        delay:100,
+      }); 
+      AOS.refresh();
+  }, [])
   return ( 
   <div>
    <Navbar/>
-   <Hero/> 
+   <Hero/>  
+   <Products/>
   </div>
     
    
