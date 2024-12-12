@@ -11,7 +11,7 @@ const ProductsData = [
         img: card1,  // Correct image import
         title: "Women Ethnic",
        rating: 5.0,
-       // color: "white",
+       color: "white",
         aosDelay: "0"
     }, 
 
@@ -20,7 +20,7 @@ const ProductsData = [
         img: card2,  // Correct image import
        title: "Women Ethnic",
        rating: 5.0,
-       // color: "red",
+       color: "red",
         aosDelay: "200"
     },
     {
@@ -28,7 +28,7 @@ const ProductsData = [
         img: card3,  // Correct image import
         title: "Women Western",
         rating: 4.0,
-        //color: "brown",
+        color: "brown",
         aosDelay: "400"
     },
     {
@@ -36,7 +36,7 @@ const ProductsData = [
         img: card4,  // Correct image import
         title: "Goggles",
         rating: 4.4,
-        //color: "yellow",
+        color: "yellow",
         aosDelay: "600"
     },
     {
@@ -44,7 +44,7 @@ const ProductsData = [
         img: card4,  // Correct image import
         title: "Goggles",
        rating: 4.4,
-        //color: "pink",
+        color: "pink",
         aosDelay: "800" 
     },
 ];
@@ -66,14 +66,24 @@ const Products = () => {
                         {/* Card section */}
                         {ProductsData.map((data) => (
                             <div key={data.id} data-aos="fade-up" data-aos-delay={data.aosDelay}>
-                                <div className="relative">
-                                    <img src={data.img} alt={data.title}
+                                <div className="relative transform transition-transform duration-300 ease-in-out hover:scale-110  drop-shadow-md">
+                                    <img 
+                                    src={data.img} 
+                                    alt={data.title} 
+
                                         className='h-[220px] w-[150px] object-cover rounded-md' />
-                                     <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-40 text-white p-2 text-center rounded-md"> 
-                                        <h3 className=" font-semibold">{data.title}</h3>
+                                     <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-40 text-white p-2 text-center rounded-md"/> 
+                                        
+                                        <h3 className=" font-bold">{data.title}</h3>
                                         <p className='text-sm text-gray-600'>{data.color}</p> 
-                                    
-                                          <FaStar className='text-yellow-400'/> 
+                                        <div className="flex justify-center mt-2">
+                                       <FaStar className="text-yellow-500" />
+                                         <FaStar className="text-yellow-500" />
+                                         <FaStar className="text-yellow-500" />
+                                         <FaStar className="text-yellow-500" />
+                                         <FaStar className="text-gray-300" />
+                                          </div>
+                                        
                                           
                                         <div className="flex justify-center items-center gap-1">
                                             <span>{data.rating}</span>
@@ -81,7 +91,7 @@ const Products = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                           // </div>
                         ))}
                     </div>
                 </div>

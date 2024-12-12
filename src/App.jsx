@@ -5,6 +5,7 @@ import Products from './Components/Products/Products'
 import AOS from 'aos';
 import 'Aos/dist/aos.css';
 import TopProducts from './Components/TopProducts/TopProducts';
+import Banner from './Components/Bannner/Banner';
 
 
 
@@ -23,7 +24,8 @@ const App = () => {
    <Navbar/>
    <Hero/>  
    <Products/> 
-   <TopProducts/>
+   <TopProducts/> 
+   <Banner/>
   </div>
     
    

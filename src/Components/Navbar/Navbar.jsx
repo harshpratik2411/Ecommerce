@@ -94,7 +94,7 @@ const Navbar = () => {
               <ul>
                 {DropdownLinks.map((data) => (
                   <li key={data.id}>
-                    <a href={data.links} className=' w-full block px-4 py-2 hover:bg-gray-100 hover:text-primary'>
+                    <a href={data.links} className=' w-full block px-4 py-2 hover:bg-gray-100 hover:text-primary '>
                       {data.name}
                     </a>
                   </li>
