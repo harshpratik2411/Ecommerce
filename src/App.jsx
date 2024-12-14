@@ -5,7 +5,10 @@ import Products from './Components/Products/Products'
 import AOS from 'aos';
 import 'Aos/dist/aos.css';
 import TopProducts from './Components/TopProducts/TopProducts';
-import Banner from './Components/Bannner/Banner';
+import Banner from './Components/Bannner/Banner'; 
+import Subscribe from './Components/Subscribe/Subscribe';
+import Tesrtimonial from './Components/Testimonial/Testimonial';
+
 
 
 
@@ -25,7 +28,10 @@ const App = () => {
    <Hero/>  
    <Products/> 
    <TopProducts/> 
-   <Banner/>
+   <Banner/> 
+   <Subscribe/> 
+   <Products/> 
+   <Tesrtimonial/>
   </div>
     
    

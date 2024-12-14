@@ -92,8 +92,14 @@ const Products = () => {
                                     </div>
                                 </div>
                            // </div>
-                        ))}
+                        ))} 
                     </div>
+                      {/* view all product */} 
+                      <div className='flex justify-center'>
+                        <button className='mt-10 bg-primary cursor-pointer text-white py-2 rounded-md'>
+                            View all Button
+                        </button>
+                      </div>
                 </div>
             </div>
         </div>
