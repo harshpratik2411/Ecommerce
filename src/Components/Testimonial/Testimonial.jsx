@@ -7,19 +7,19 @@ import Slider from 'react-slick'
       id:  1,
       name: "victor",
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam porro eveniet itaque est praesentium aspernatur illo, perspiciatis repudiandae distinctio excepturi?',
-      img:'https://picsum.photos/seed/picsum/200/300',
+      img:'https://picsum.photos/id/239/200/300',
     },
     {
       id:  2,
       name: "Satya nadella",
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam porro eveniet itaque est praesentium aspernatur illo, perspiciatis repudiandae distinctio excepturi?',
-      img:'https://picsum.photos/seed/picsum/200/300',
+      img:'https://picsum.photos/id/237/200/300',
     },
     {
       id:  3,
       name: "Angella White",
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam porro eveniet itaque est praesentium aspernatur illo, perspiciatis repudiandae distinctio excepturi?',
-      img:'https://picsum.photos/seed/picsum/200/300',
+      img:'https://picsum.photos/id/240/200/300',
     },
     {
       id:  4,
@@ -80,8 +80,19 @@ const Testimonial = () => {
                 <div>
                <Slider {...settings}> 
                 {TestimonialData.map((data) => ( 
-                  <div>
-
+                  <div key={data.id} 
+                  className='flex flex-col  gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl' >
+                  
+                     <div>  
+                   <img src={data.img} alt="" 
+                   className='rounded-full h-20 w-20 ' />
+                   </div>  
+                   <div className='text-xs text-gray-600'> 
+                    <div className='flex  flex-col items-center gap-4 '> 
+                   <p>{data.text}</p>
+                   <h1 className='text-2xl font-bold text-black/60 dark:text-light'>{data.name}</h1>
+                  </div> 
+                  </div>  
                   </div>
                  
                 ))} 
@@ -93,4 +104,4 @@ const Testimonial = () => {
   )
 }
 
-export default Tesrtimonial 
+export default Testimonial 
