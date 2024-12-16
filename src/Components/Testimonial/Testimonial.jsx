@@ -73,8 +73,8 @@ const Testimonial = () => {
             {/* header section */} 
             <div className='text-center mb-10 max-w-[600px] mx-auto'>
                     <p className='text-sm text-primary'>What our customer are saying</p>
-                    <h1 className='text-3xl font-bold'>Testimonial</h1>
-                    <p className='text-xs text-gray-400 dark:text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestiae.</p>
+                    <h1 className='text-3xl sm:text-xl font-bold'>Testimonial</h1>
+                    <p className='text-xs  text-gray-400 dark:text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestiae.</p>
                 </div> 
                 {/* Testimonial cards */}  
                 <div data-aos="zoom-in">
@@ -90,7 +90,7 @@ const Testimonial = () => {
                    <div className='text-xs dark:text-white text-gray-600'> 
                     <div className='flex  flex-col items-center gap-4 '> 
                    <p>{data.text}</p>
-                   <h1 className=' dark:text-white  text-2xl font-bold text-black/60 dark:text-light'>{data.name}</h1>
+                   <h1 className=' dark:text-white sm:text-2xl text-2xl font-bold text-black/60 dark:text-light'>{data.name}</h1>
                   </div> 
                   </div> 
                       <p className='text-black/20 text-9xl font-serif absolute  top-0 right-0'> 

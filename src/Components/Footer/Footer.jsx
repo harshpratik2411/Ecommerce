@@ -1,16 +1,14 @@
 import React from 'react';
 import Footerlogo from '../../assets/Footerlogo/Foot.jpg'; // Ensure path is correct 
 import {
-     FaFacebook,
-     FaInstagram,
-     FaLinkedin,
-     FaLocationArrow,
-     FaMobileAlt, 
-     FaGithub ,
-     FaApple,
-   }   from "react-icons/fa"
-
-
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaMobileAlt,
+  FaGithub,
+  FaApple,
+} from 'react-icons/fa';
 
 // Inline style for the footer background
 const BannerImg = {
@@ -30,93 +28,67 @@ const FooterLinks = [
 ];
 
 const Footer = () => {
-  // Console log the image URL to check if it’s correct
-  console.log(Footerlogo);
-
   return (
     <div style={BannerImg} className="text-black mb-20">
-      <div  data-aos="zoom-in"
-       className="container h-96 ">
-        <div className="flex justify-between items-center">
+      <div data-aos="zoom-in" className="container py-10">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
           {/* Company details */}
-          <div className='py-8 px-4'>
-            <h1  
-             className='sm:text-3xl text-3xl font-bold sm:text-left text-justify gap-6 pb-44' 
-              >Shopsy</h1> 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Laboriosam, error eos rerum accusamus cupiditate recusandae.
+          <div className="text-center md:text-left px-4">
+            <h1 className="text-3xl font-bold text-Black">Shopsy</h1>
+            <p className="text-sm text-black mt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, error eos rerum accusamus cupiditate recusandae.
             </p>
           </div>
 
-          {/* Footer links */} 
-          <div> 
-          <div data-aos="zoom-in"
-           className='grid grid-cols-2  col-span-2 pv-44 gap-15 pt-4 md:pl-10'> 
-            <h1 className='sm:text-1xl text-2xl font-bold sm:text-left text-justify mb-3'>
-              Important Links
-            </h1>
-            <ul className="flex  flex-col gap-3 "> 
+          {/* Footer links */}
+          <div className="w-full md:w-1/3">
+            <h1 className="text-xl font-bold text-black mb-3">Important Links</h1>
+            <ul className="flex flex-col gap-3">
               {FooterLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.link} className="hover:text-primary cursor-pointer hover:translate-x-1 duration-300  text-black p-10 text-l font-semibold  "> 
+                  <a
+                    href={link.link}
+                    className="text-black hover:text-primary cursor-pointer hover:translate-x-1 duration-300 text-l font-semibold"
+                  >
                     {link.title}
                   </a>
                 </li>
               ))}
-            </ul> 
+            </ul>
           </div>
-        </div>   
-          {/* <div> 
-          <div className='grid grid-cols-2  col-span-2 pv-44 gap-15 pt-4 md:pl-10'> 
-            <h1 className='sm:text-1xl text-xl font-bold sm:text-left text-justify mb-3'>
-              Important Links
-            </h1>
-            <ul className="flex  flex-col gap-3 "> 
-              {FooterLinks.map((link, index) => (
-                <li key={index}>
-                  <a href={link.link} className="hover:text-primary cursor-pointer hover:translate-x-1 duration-300  text-black p-10 text-l font-semibold  "> 
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-            </ul> 
-          </div>
-        </div>    */}
-          {/* social Links */}  
-          <div>
-              <div className='flex items-center gap-6 mt-1 px-6'>
-                <a href="#">
-               <FaInstagram  className="text-3xl"/>
-                </a> 
-                <a href="#">
-               <FaFacebook  className="text-3xl"/>
-                </a> 
-                <a href="#">
-               <FaLinkedin  className="text-3xl"/>
-                </a> 
-                <a href="#">
-               <FaGithub  className="text-3xl"/>
-                </a> 
-                <a href="#">
-               <FaApple  className="text-3xl"/>
-                </a> 
+
+          {/* Social Links */}
+          <div className="w-full md:w-1/3 flex flex-col items-center md:items-start">
+            <div className="flex gap-6 mt-4">
+              <a href="#" className="text-3xl text-black">
+                <FaInstagram />
+              </a>
+              <a href="#" className="text-3xl text-black">
+                <FaFacebook />
+              </a>
+              <a href="#" className="text-3xl text-black">
+                <FaLinkedin />
+              </a>
+              <a href="#" className="text-3xl text-black">
+                <FaGithub />
+              </a>
+              <a href="#" className="text-3xl text-black">
+                <FaApple />
+              </a>
+            </div>
+
+            <div className="mt-6 flex flex-col items-center md:items-start">
+              <div className="flex items-center gap-2 text-black">
+                <FaLocationArrow className="text-2xl" />
+                <p>Varanasi, Uttar Pradesh</p>
               </div>
-                
-          <div className='mt-6'>
-             <div className='flex items-center gap-6  '
-            >< FaLocationArrow className='text-2xl'/> 
-            <p>Varanasi ,Uttar pradesh</p>
-              
-              </div> 
-             <div className=' text-right flex  items-center gap-8 mt-3 px-2 '
-            >< FaMobileAlt className='text-2xl'/> 
-            <p >+91 1234567890</p>
-              
+              <div className="mt-3 flex items-center gap-2 text-black">
+                <FaMobileAlt className="text-2xl" />
+                <p>+91 1234567890</p>
               </div>
-           </div> 
+            </div>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   );

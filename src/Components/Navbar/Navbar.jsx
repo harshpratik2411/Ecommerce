@@ -22,7 +22,7 @@ const DropdownLinks = [
   { id: 5, name: "Top rated", links: "/#" },
 ];
 
-const Navbar = () => {
+const Navbar = (handleOrderPopup) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
             <button
-              onClick={() => alert("Ordering is not available yet")}
+              onClick={() => alert("items are not listed yet")}
               className='bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group'
             >
               <span className='group-hover:block hidden transition-all duration-200'>
