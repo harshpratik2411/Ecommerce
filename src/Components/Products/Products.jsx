@@ -66,7 +66,7 @@ const Products = () => {
                         {/* Card section */}
                         {ProductsData.map((data) => (
                             <div key={data.id} data-aos="fade-up" data-aos-delay={data.aosDelay}>
-                                <div className="relative transform transition-transform duration-300 ease-in-out hover:scale-110  drop-shadow-md">
+                                <div className="relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110  drop-shadow-md">
                                     <img 
                                     src={data.img} 
                                     alt={data.title} 
@@ -96,7 +96,7 @@ const Products = () => {
                     </div>
                       {/* view all product */} 
                       <div className='flex justify-center'>
-                        <button className='mt-10 bg-primary cursor-pointer text-white py-2 rounded-md'>
+                        <button className='mt-10  bg-primary cursor-pointer text-white py-2 rounded-md '>
                             View all Button
                         </button>
                       </div>

@@ -7,7 +7,8 @@ import 'Aos/dist/aos.css';
 import TopProducts from './Components/TopProducts/TopProducts';
 import Banner from './Components/Bannner/Banner'; 
 import Subscribe from './Components/Subscribe/Subscribe';
-import Tesrtimonial from './Components/Testimonial/Testimonial';
+import Footer from './Components/Footer/Footer';
+import Testimonial from './Components/Testimonial/Testimonial';
 
 
 
@@ -23,7 +24,7 @@ const App = () => {
       AOS.refresh();
   }, [])
   return ( 
-  <div>
+  <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
    <Navbar/>
    <Hero/>  
    <Products/> 
@@ -31,7 +32,8 @@ const App = () => {
    <Banner/> 
    <Subscribe/> 
    <Products/> 
-   <Tesrtimonial/>
+   <Testimonial/> 
+    <Footer/>
   </div>
     
    

@@ -74,31 +74,33 @@ const Testimonial = () => {
             <div className='text-center mb-10 max-w-[600px] mx-auto'>
                     <p className='text-sm text-primary'>What our customer are saying</p>
                     <h1 className='text-3xl font-bold'>Testimonial</h1>
-                    <p className='text-xs text-gray-400'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestiae.</p>
+                    <p className='text-xs text-gray-400 dark:text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestiae.</p>
                 </div> 
                 {/* Testimonial cards */}  
-                <div>
+                <div data-aos="zoom-in">
                <Slider {...settings}> 
-                {TestimonialData.map((data) => ( 
+                {TestimonialData.map((data) => (  
+                  <div className='my-6' >
                   <div key={data.id} 
-                  className='flex flex-col  gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl' >
-                  
-                     <div>  
+                  className=' dark:bg-gray-800 flex flex-col  gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl bg-primary/10 dark:text-white text-l'>
+                     <div className='mb-4'>  
                    <img src={data.img} alt="" 
-                   className='rounded-full h-20 w-20 ' />
+                   className='rounded-full h-20 w-20' /> 
                    </div>  
-                   <div className='text-xs text-gray-600'> 
+                   <div className='text-xs dark:text-white text-gray-600'> 
                     <div className='flex  flex-col items-center gap-4 '> 
                    <p>{data.text}</p>
-                   <h1 className='text-2xl font-bold text-black/60 dark:text-light'>{data.name}</h1>
+                   <h1 className=' dark:text-white  text-2xl font-bold text-black/60 dark:text-light'>{data.name}</h1>
                   </div> 
-                  </div>  
+                  </div> 
+                      <p className='text-black/20 text-9xl font-serif absolute  top-0 right-0'> 
+                    </p> 
+                   </div>
                   </div>
                  
                 ))} 
                 </Slider>
                 </div>
-
         </div>
     </div>
   )
