@@ -77,7 +77,7 @@ const Products = () => {
                                         <h3 className=" font-bold">{data.title}</h3>
                                         <p className='text-sm text-gray-600'>{data.color}</p> 
                                         <div className="flex justify-center mt-2">
-                                       <FaStar className="text-yellow-500" />
+                                         <FaStar className="text-yellow-500" />
                                          <FaStar className="text-yellow-500" />
                                          <FaStar className="text-yellow-500" />
                                          <FaStar className="text-yellow-500" />

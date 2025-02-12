@@ -73,7 +73,7 @@ const Navbar = (handleOrderPopup) => {
         <ul className="flex space-x-4 gap-4">
           {Menu.map((data) => (
             <li key={data.id}>
-              <a href={data.link} className="text-gray-800 inline-block px-4 dark:text-white hover:text-primary duration-200">
+              <a href={data.link} className="text-gray-800  inline-block px-4 dark:text-white hover:text-primary duration-200">
                 {data.name}
               </a>
             </li>
